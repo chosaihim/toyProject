@@ -29,19 +29,6 @@ app.get('/auth/kakao',(req,res)=>{
     console.log(kakaoAuthURL);
     res.redirect(kakaoAuthURL);
 })
-
-//추가
-app.get('/auth/kakao',(req,res)=>{
-    url : https://kauth.kakao.com/oauth/token
-    method : post
-    body :
-        {
-            "grant_type" : "authorization_code",
-            "client_id" : "d2fcc1892d8542ac6e01770efbc716da",
-            "redirect_uri": "http://localhost:3000/",
-            "code": "fJvrIoJcxwCuH46FAWEpjMbSiLOu4Nkzo5b_KOFSVJ4h-66I1Xazp-i6ZTSdUOAa2mwaBwopyV8AAAGH9lgMrg"
-        }
-})
  
 app.get('/auth/kakao/callback', async(req,res)=>{
     //axios>>promise object
